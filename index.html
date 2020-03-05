@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!--bootstrap-->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" 
+    integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" 
+    crossorigin="anonymous">
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" 
+    integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" 
+    crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" 
+    integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" 
+    crossorigin="anonymous"></script>
+    <title>Rain</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<div class="container-fluid">
+    <div class="row-wrapper d-flex">
+
+
+        <div class="flex-column select-time py-5">
+            <button class="btn-dark btn-lg d-block mt-5" onclick="twoMinutes()">2 minutes</button>
+            <button class="btn-dark btn-lg d-block mt-5" onclick="fiveMinutes()">5 minutes</button>
+            <button class="btn-dark btn-lg d-block mt-5" onclick="tenMinutes()">10 minutes</button>
+        </div>
+
+        <div class="flex-column play-button-cont">
+            <audio id="song" >
+                <source src="./sounds/rain.mp3">
+            </audio>
+            <button class="btn play-button btn-outline-warning float-right" onclick="checkIfPlaying()">
+                <span class="play-text">Play</span></button>
+        </div>
+
+
+    </div>
+</div>
+
+<script>
+
+function checkIfPlaying() {
+    const song = document.getElementById("song");
+    if (song.paused) {
+      song.play();
+    } else {
+      song.pause();
+    }
+};
+
+function twoMinutes() {
+    window.setInterval(function () {
+    const song = document.getElementById("song");
+    var date = new Date();
+    if ((date.getMinutes() % 2) == 0) {
+        if (!song.paused) {
+            song.pause() // your method
+        }
+    }
+   }, 60000);
+};
+
+function fiveMinutes() {
+    window.setInterval(function () {
+    const song = document.getElementById("song");
+    var date = new Date();
+    if ((date.getMinutes() % 2) == 0) {
+        if (!song.paused) {
+            song.pause() // your method
+        }
+    }
+   }, 60000);
+};
+
+function tenMinutes() {
+    window.setInterval(function () {
+    const song = document.getElementById("song");
+    var date = new Date();
+    if ((date.getMinutes() % 2) == 0) {
+        if (!song.paused) {
+            song.pause() // your method
+        }
+    }
+   }, 60000);
+};
+
+</script>
+
+</body>
+</html>
