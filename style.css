@@ -1,0 +1,28 @@
+html, body {
+    height: 100%;
+    width: 100%;
+  }
+  .container-fluid {
+    height: 100%;
+    width: 100%;
+  }
+.row-wrapper {
+    height: 100%;
+    width: 100%;
+    background: url('/img/pexels-photo-1529360web.jpg');
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    background-size: cover;
+    -o-background-size: cover;
+}
+.play-button-cont {
+    margin-left: 25em;
+}
+.play-button {
+    width: 200px;
+    height: 200px;
+    margin-top: 20em;
+}
+.play-text {
+    font-size: 5em;
+}
